@@ -79,6 +79,7 @@ struct LocalCsvTable {
     batches: Vec<RecordBatch>,
 }
 
+// todo 为什么这里没有实现全部方法. 因为 tableprovider 中别的方法有default值
 #[async_trait]
 impl TableProvider for LocalCsvTable {
     fn as_any(&self) -> &dyn std::any::Any {
